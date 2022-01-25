@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-height: 10vh;
+    --footer-height: 5vh;
+}
+header {
+    background-color: black;
+    color: white;
+    height: var(--header-height);
+}
+main {
+    text-align: center;
+
+    height: 85vh;
+}
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+
+    height: var(--footer-height);
+}
