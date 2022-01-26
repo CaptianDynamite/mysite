@@ -11,35 +11,177 @@
   </head>
   <body>
     <header><h1>Probability</h1></header>
-    <h2>Humble beginnings</h2>
-    <p>
-      Probability is the mathematical description of random experiments,
-      defined in terms of sets and functions.
-    </p>
+    <main>
+      <h2>Humble beginnings</h2>
+      <p>
+        Probability is the mathematical description of random experiments,
+        defined in terms of sets and functions.
+      </p>
 
-    <h3>Events</h3>
-    <p>
-      A random experiment or trial is an experiment whose outcome is not known
-      in advance.
-    </p>
+      <h3>Random Experiment</h3>
+      <p>
+        A random experiment or trial is an experiment whose outcome is not known
+        in advance.
+      </p>
 
-    <h3>Sample Space</h3>
-    <p>The set \(\Omega\) of all possible outcomes is called the sample space.
-       Outcomes are sometimes referred to as sample points.
-    </p>
+      <h3>Sample Space</h3>
+      <p>The set \(\Omega\) of all possible outcomes is called the sample space.
+         Outcomes are sometimes referred to as sample points.
+      </p>
 
-    <h3>Events</h3>
-    <p>
-      An event is any set of outcomes (any subset of \(\Omega\).
-      Events are usually denoted by uppercase letters, e.g. \(A\) or \(B\).
-    </p>
+      <h3>Events</h3>
+      <p>
+        An event is any set of outcomes (any subset of \(\Omega\).
+        Events are usually denoted by uppercase letters, e.g. \(A\) or \(B\).
+      </p>
 
-    <p>
-      A concrete example of the above is the following. The sample space for
-      tossing a die is given by the following,
-      \[ \Omega = \big\{ 1, 2, 3, 4, 5, 6 \big\} \]
-      Like wise, the event of rolling an even number is given by
-      \[ A = \big\{ 2, 4, 6 \big\} \]
-    </p>
+      <h3>Example</h3>
+      <p>
+        A concrete example of the above is the following. The sample space for
+        tossing a die is given by the following,
+        \[ \Omega = \big\{ 1, 2, 3, 4, 5, 6 \big\} \]
+        Like wise, the event of rolling an even number is given by
+        \[ A = \big\{ 2, 4, 6 \big\} \]
+      </p>
+
+      <h3>Combining Events</h3>
+      <p>
+        Let \(A\) and \(B\) be two events.
+      </p>
+      <p>
+        The event that \(A\) <strong>or</strong> \(B\) occurs is represented by
+        \[ A \cup B \]
+      </p>
+      <p>
+        Likewise, the event that \(A\) <strong>and</strong> \(B\) occur is
+        represented by
+        \[ A \cap B \]
+      </p>
+      <p>
+        More generally, if \( \big\{ A_i \big\}_{i=1}^n \) is a collection of events,
+        then
+        \[ \bigcup\limits_{i=1}^n A_i = A_1 \cup A_2 \cup \cdots \]
+        is the event that \(\exists i\) such that \(A_i\) occurs,
+        whereas
+        \[\bigcap\limits_{i=1}^n A_i = A_1 \cap A_2 \cap \cdots \]
+        is the event that \( \forall i \), \(A_i\) occurs.
+      </p>
+
+      <h3>Complement of an Event</h3>
+      <p>
+        If \(A\) is an event, then \(A^C\) (said as "A complement") is the event
+        in which \(A\) does not occur, formally,
+        \[ A^C = \Omega \setminus A \]
+      </p>
+
+      <h3>De Morgan's Law</h3>
+      <p> Let \( \big\{ A_i \big\}_{i=1}^n \) be a set of events. </p>
+      <p>
+        Then the following holds:
+      </p>
+      <ol>
+        <li> \[ \left( \bigcup\limits_{i=1}^n A_i \right)^C = \bigcap\limits_{i=1}^n A_i \] </li>
+        <li> \[ \left( \bigcap\limits_{i=1}^n A_i \right)^C = \bigcup\limits_{i=1}^n A_i \] </li>
+      </ol>
+
+      <h3>Subsets</h3>
+      <p>
+        Given \(A \subset B\), if \( A \) occurs, then \(B\) occurs, that is
+        \[A \implies B\]
+      </p>
+
+      <h3>Impossible event</h3>
+      <p>
+        The empty set \(\emptyset\) is called the impossible event because it
+        never occurs.
+      </p>
+      <h3>Certain Event</h3>
+      <p>
+        The set \(\Omega\) is called the certain event since it is guaranteed to
+        occur.
+      </p>
+      <p>
+        These two events have the following relationship
+        \[ \Omega^C = \emptyset \qquad \mathcal{\&} \qquad \emptyset^C = \Omega \]
+      </p>
+
+      <h3>Disjoint Events</h3>
+      <p>
+        The events \(A\) and \(B\) are said to be disjoint if
+        \[ A \cap B = \emptyset \]
+      </p>
+      <p>
+        More generally, the set of events \( A = \big\{ A_i \big\}_{i=1}^n \) are said to
+        be disjoint if:
+        \[ \forall A_i \in A, \quad \forall A_j \in A, \quad A_i \cap A_j = \emptyset  \]
+      </p>
+      <p>
+        That is, these events <strong>cannot</strong> occur simultaneously.
+      </p>
+
+      <h3>Exhaustive Events</h3>
+      <p>
+        The set of events \{A = \big\{ A_i \big\}_{i=1}^n \} is said to be
+        exhaustive if \[ \bigcup\limits_{i=1}^n A_i = \Omega \]
+      </p>
+      <p>
+        That is, at least one of these events <strong>must</strong> occur.
+      </p>
+
+      <h3>Partition</h3>
+      <p>
+        A collection of events \( \mathcal{P} = \big\{ A_1, A_2, \cdots \big\} \)
+        is called a partition of \( \Omega \) if it is both mutually exclusive
+        and exhaustive.
+      </p>
+
+      <h2>Probability, an Introduction</h2>
+      <h3>A justification of \(\mathbb{P}\)</h3>
+      <p>
+        In order to measure the relative likelihood of events, we define a
+        function \( \mathbb{P} \) in such a way that, for any event \( A \),
+        \( \mathbb{P} \) can be interpreted as "the probability of A".
+      </p>
+      <p>
+        Suppose that we perform our random experiment \(N\) times, and let
+        \(A\) be some arbitrary event. Let \(N(A)\) be the number of times that
+        \(A\) occurs. Then, as \(N\) "becomes large", we should expect the ratio
+        \( \frac{N(A)}{N} \) to "settle down" to some constant value, namely
+        \( \mathbb{P}(A) \).
+      </p>
+      <p>
+        Since \(\Omega\) always occurs, that is, \(N(\Omega) = N\) we should set
+        \( \mathbb{P}(\Omega) = 1 \). Similarly, since \(\emptyset\) never
+        occurs we shoudl set \(\mathbb{P}(\emptyset) = 0\). Now, let \(A\) be an
+        arbitrary event. Since \( 0 \leqslant N(A) \leqslant N \), we should
+        have that \(0 \leqslant \mathbb{P}(A) \leqslant 1 \).
+      </p>
+      <p>
+        Since \( N(A^C) = N - N(A) \), we should have that
+        \( \mathbb{P}(A^C) = 1 - \mathbb{P}(A) \).
+      </p>
+      <p>
+        Finally, if \(A\) and \(B\) are disjoint events then
+        \( N(A\cup B) = N(A) + N(B) \) and so
+        \( \mathbb{P}(A\cup B) = \mathbb{P}(A) + \mathbb{P}(B)\)
+      </p>
+      <p>
+        Most properties of \(\mathbb{P}\) can be found in this manner.
+      </p>
+
+      <h3>The Probability Axioms</h3>
+      <p>
+        The function \( \mathbb{P}: \Omega \to [0, 1] \) is called a probability
+        measure if it satisfies the following:
+      </p>
+      <ol>
+        <li> \[ \forall A \in \Omega, \quad \mathbb{P}(A) \geqslant 0 \] </li>
+        <li> \[ \mathbb{P}(\Omega) = 1 \] </li>
+        <li>
+          If \(A_1, A_2, \dots \) are mutually exclusive events, then
+          \[\mathbb{P}(A_1, A_2, \dots) = \mathbb{P}(A_1) + \mathbb{P}(A_2) + \cdots \]
+        </li>
+      </ol>
+    </main>
   </body>
 </html>
