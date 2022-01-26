@@ -3,11 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 :root {
     --header-height: 10vh;
     --footer-height: 5vh;
 }
+
 header {
     background-color: black;
     color: white;
